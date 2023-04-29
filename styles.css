@@ -20,6 +20,7 @@ body {
     margin: 0;
     background-color: var(--background-color);
     font-family: system-ui;
+    color: #636363;
 
     display: grid;
     grid-template-columns: minmax(320px, 1fr) minmax(600px, 4fr);
@@ -29,10 +30,15 @@ body {
 h1, h2, h3, h4 {
     margin: 0;
     padding: 0;
+    color: #000000;
 }
 
 p {
     margin: 0 0 1rem 0;
+}
+
+strong {
+    color: #000000;
 }
 
 button {
@@ -76,6 +82,10 @@ button {
     height: 2rem;
     object-position: center;
     object-fit: contain;
+}
+
+.navigation__title {
+    color: #ffffff;
 }
 
 .list-icon {
