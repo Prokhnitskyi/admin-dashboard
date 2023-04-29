@@ -204,7 +204,8 @@ button {
 .actions {
     grid-column: span 2;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, min-content));
+    justify-content: end;
     padding: 1rem;
     gap: 1rem;
 }
