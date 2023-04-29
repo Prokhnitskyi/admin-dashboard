@@ -64,6 +64,8 @@ button {
 
 .navigation ul {
     list-style: none;
+    font-size: 1.1rem;
+    letter-spacing: 0.06rem;
     padding: 0;
     margin: 0;
 }
@@ -184,11 +186,15 @@ button {
 }
 
 .greeting__picture {
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: 5rem;
     object-position: center;
     object-fit: cover;
     border-radius: 50%;
+}
+
+.greeting__wrapper {
+    font-size: 1.2rem;
 }
 
 .actions {
@@ -277,14 +283,62 @@ button {
 
 .sidebar {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 50% 50%;
+    row-gap: 2rem;
+    grid-auto-rows: min-content;
+    align-content: start;
+
 }
 
 .announcements {
+    margin: 1rem;
+}
 
+.announcements__item {
+    border-bottom: 2px solid var(--background-color);
+    margin-bottom: 1rem;
+}
+
+.announcements__item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.announcements__item-title {
+    margin-bottom: 0.2rem;
+}
+
+.announcements__item-description {
+    font-size: 0.9rem;
 }
 
 .trending {
+    margin: 1rem;
+}
 
+.announcements__title,
+.trending__title {
+    margin-bottom: 1rem;
+}
+
+.announcements__container,
+.trending__container {
+    background-color: var(--alternate-bg-color);
+    padding: 2rem 2rem 0.5rem;
+    border-radius: 8px;
+    filter: drop-shadow(2px 0 2px rgba(6, 7, 12, 0.2));
+}
+
+.trending__item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.trending__avatar {
+    width: 3rem;
+    height: 3rem;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 50%;
 }
