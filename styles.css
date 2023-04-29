@@ -1,6 +1,11 @@
+:root {
+    --main-color: #1992D4;
+    --accent-color: #F0B429;
+    --background-color: #E2E8F0;
+}
+
 * {
     box-sizing: border-box;
-    outline: 1px dotted rgba(70, 130, 180, 0.55);
 }
 
 html {
@@ -12,43 +17,94 @@ body {
     min-height: 100vh;
     min-width: 320px;
     margin: 0;
+    background-color: var(--background-color);
 
     display: grid;
     grid-template-columns: minmax(320px, 1fr) minmax(600px, 4fr);
     grid-template-rows: 1fr 4.5fr;
 }
 
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+}
+
+
 .navigation {
-    background-color: khaki;
+    background-color: var(--main-color);
+    color: #ffffff;
+    padding: 1rem;
     grid-row: 1 / -1;
+
+    display: grid;
+    row-gap: 2rem;
+    grid-template-columns: 1fr;
+    align-content: start;
+
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li {
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: start;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+
+.navigation__header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    flex: 0 0 2rem;
+    width: 2rem;
+    height: 2rem;
+    object-position: center;
+    object-fit: contain;
+}
+
+.list-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+    filter: invert(1);
 }
 
 .header {
-    background-color: forestgreen;
+
     grid-column: 2 / -1;
 }
 
 .main {
-    background-color: steelblue;
+
     display: grid;
     grid-template-columns: 3fr minmax(300px, 1fr);
 }
 
 .projects {
-    background-color: salmon;
+
 }
 
 .sidebar {
-    background-color: cornflowerblue;
+
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 50% 50%;
 }
 
 .announcements {
-    background-color: aquamarine;
+
 }
 
 .trending {
-    background-color: coral;
+
 }
