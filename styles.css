@@ -2,6 +2,7 @@
     --main-color: #1992D4;
     --accent-color: #F0B429;
     --background-color: #E2E8F0;
+    --alternate-bg-color: #FFFFFF;
 }
 
 * {
@@ -78,13 +79,20 @@ h1, h2, h3, h4 {
     justify-content: start;
     align-items: center;
     column-gap: 2rem;
+    outline: none;
 
     text-decoration: none;
     color: inherit;
 }
 
-.navigation li:has(.list-link:hover)  {
-    backdrop-filter: brightness(0.8);
+.navigation li {
+    transition: all 0.2s;
+}
+
+.navigation li:hover, .navigation li:has(.list-link:focus)  {
+    backdrop-filter: brightness(0.9);
+    box-shadow: 0 0 2px 0 #142e7c80;
+    transform: translateY(2px);
 }
 
 .header {
