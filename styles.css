@@ -215,7 +215,7 @@ button {
 }
 
 .projects__title {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
@@ -229,7 +229,7 @@ button {
 .projects__item {
     background-color: var(--alternate-bg-color);
     border-left: 6px solid var(--accent-color);
-    padding: 0.5rem;
+    padding: 1.5rem 1rem 0.5rem;
     border-radius: 8px;
     filter: drop-shadow(2px 0 2px rgba(6, 7, 12, 0.2));
 
