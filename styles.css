@@ -31,6 +31,14 @@ h1, h2, h3, h4 {
     padding: 0;
 }
 
+button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    color: var(--alternate-bg-color);
+    cursor: pointer;
+}
 
 .navigation {
     background-color: var(--main-color);
@@ -82,6 +90,7 @@ h1, h2, h3, h4 {
     outline: none;
 
     text-decoration: none;
+    font-weight: bold;
     color: inherit;
 }
 
@@ -97,10 +106,101 @@ h1, h2, h3, h4 {
 
 .header {
     grid-column: 2 / -1;
+    background-color: var(--alternate-bg-color);
+    display: grid;
+    grid-template-columns: minmax(320px, 2fr) 1fr;
+    /*grid-template-rows: min-content max-content;*/
+    align-items: center;
+}
+
+.search {
+    display: flex;
+    padding: 1rem;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search__external-button {
+    font-size: 0;
+    width: 2rem;
+    height: 2rem;
+    background: url('./images/icons/search.svg') center center no-repeat;
+}
+
+.search__input {
+    flex-grow: 1;
+    padding: 0.4rem 1rem;
+    border: none;
+    border-radius: 16px;
+    background-color: var(--background-color);
+
+}
+
+.my-profile {
+    display: flex;
+    padding: 1rem;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+}
+
+.notifications {
+    font-size: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url('./images/icons/notifications.svg') center center no-repeat;
+}
+
+.my-profile__picture {
+    width: 2rem;
+    height: 2rem;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.greeting {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    justify-content: start;
+    align-items: center;
+}
+
+.greeting__picture {
+    width: 3rem;
+    height: 3rem;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.action {
+    background-color: var(--main-color);
+    color: var(--alternate-bg-color);
+    min-width: 100px;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 14px;
+}
+
+.action:hover {
+    filter: brightness(1.05) drop-shadow(0 0 2px #142e7c80);
+}
+
+.action:active {
+    filter: brightness(0.95);
 }
 
 .main {
-
     display: grid;
     grid-template-columns: 3fr minmax(300px, 1fr);
 }
