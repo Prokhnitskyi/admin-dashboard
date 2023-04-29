@@ -208,6 +208,7 @@ button {
     justify-content: end;
     padding: 1rem;
     gap: 1rem;
+    font-size: 1rem;
 }
 
 @media screen and (max-width: 970px) {
@@ -242,7 +243,7 @@ button {
 
 .main {
     display: grid;
-    grid-template-columns: 3fr minmax(300px, 1fr);
+    grid-template-columns: 3fr min(50%, 300px);
 }
 
 .projects {
@@ -360,4 +361,8 @@ button {
     object-position: center;
     object-fit: cover;
     border-radius: 50%;
+}
+
+.trending__project-name {
+    white-space: nowrap;
 }
