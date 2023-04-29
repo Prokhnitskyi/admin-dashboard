@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    outline: 1px dotted rgba(70, 130, 180, 0.55);
 }
 
 html {
@@ -11,4 +12,43 @@ body {
     min-height: 100vh;
     min-width: 320px;
     margin: 0;
+
+    display: grid;
+    grid-template-columns: minmax(320px, 1fr) minmax(600px, 4fr);
+    grid-template-rows: 1fr 4.5fr;
+}
+
+.navigation {
+    background-color: khaki;
+    grid-row: 1 / -1;
+}
+
+.header {
+    background-color: forestgreen;
+    grid-column: 2 / -1;
+}
+
+.main {
+    background-color: steelblue;
+    display: grid;
+    grid-template-columns: 3fr minmax(300px, 1fr);
+}
+
+.projects {
+    background-color: salmon;
+}
+
+.sidebar {
+    background-color: cornflowerblue;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+}
+
+.announcements {
+    background-color: aquamarine;
+}
+
+.trending {
+    background-color: coral;
 }
